@@ -1,0 +1,285 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#FFFFFF" tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="16">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"></LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/output"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom|right"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:padding="20dp"
+        android:text="0" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:layout_weight="10">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                android:text="/"
+                android:id="@+id/division"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+            <Button
+                android:text="*"
+                android:id="@+id/multiply"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+            <Button
+                android:text="-"
+                android:id="@+id/minus"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="+"
+                android:id="@+id/plus"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                android:text="7"
+                android:id="@+id/seven"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="8"
+                android:id="@+id/eight"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="9"
+                android:id="@+id/nine"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="%"
+                android:id="@+id/modulus"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                android:text="6"
+                android:id="@+id/six"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="5"
+                android:id="@+id/five"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="4"
+                android:id="@+id/four"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="C"
+                android:id="@+id/reset"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                android:text="3"
+                android:id="@+id/three"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="2"
+                android:id="@+id/two"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="1"
+                android:id="@+id/one"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="←"
+                android:id="@+id/back"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="4" >
+
+            <Button
+                android:text="00"
+                android:id="@+id/doubleZero"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="0"
+                android:id="@+id/zero"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:text="."
+                android:id="@+id/point"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="numberClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="="
+                android:id="@+id/result"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:onClick="operatorClicked" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" >
+
+    </LinearLayout>
+
+</LinearLayout>
